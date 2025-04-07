@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
       const persons = await Person.find(); // 🔍 Fetch all persons
       res.status(200).json(persons);
     } catch (error) {
-      console.error("❌ Error Fetching Persons:", error);
+      console.error("Error Fetching Persons:", error);
       res.status(500).json({ message: "Error fetching persons", error: error.message });
     }
   });
@@ -24,7 +24,7 @@ router.post("/", async (req, res) => {
   
       res.status(201).json({ message: "Person saved successfully", person: savedPerson });
     } catch (error) {
-      console.error("❌ Error Saving Person:", error);
+      console.error("Error Saving Person:", error);
       res.status(400).json({ message: "Error saving person", error: error.message });
     }
   });
@@ -66,7 +66,7 @@ router.put("/:id", async (req, res) => {
     res.status(200).json({ message: "Person updated successfully", data: result });
 
   } catch (error) {
-    console.error("❌ Error updating person:", error);
+    console.error("Error updating person:", error);
     res.status(500).json({ message: "Internal server error", error: error.message });
   }
 });

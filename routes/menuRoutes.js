@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
       const menus = await Menu.find(); // 🔍 Fetch all persons
       res.status(200).json(menus);
     } catch (error) {
-      console.error("❌ Error Fetching Persons:", error);
+      console.error("Error Fetching Persons:", error);
       res.status(500).json({ message: "Error fetching persons", error: error.message });
     }
   });
@@ -27,7 +27,7 @@ router.get("/", async (req, res) => {
   
       res.status(201).json({ message: "Person saved successfully", person: savedMenu });
     } catch (error) {
-      console.error("❌ Error Saving Person:", error);
+      console.error("Error Saving Person:", error);
       res.status(400).json({ message: "Error saving person", error: error.message });
     }
   });

@@ -28,7 +28,7 @@ const menuSchema = new mongoose.Schema({
         required: true,
         min: 0
     }
-}, { timestamps: true }); // Adds createdAt and updatedAt fields
+}, { timestamps: true }); 
 
 const Menu = mongoose.model("Menu", menuSchema);
 

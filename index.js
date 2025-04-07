@@ -17,7 +17,7 @@ app.use('/menu', menuRoutes)
 
 
 
-// 📌 Start Server
+//  Start Server
 app.listen(3000, () => {
   console.log("Server is running at the port of 3000");
 });
